@@ -3,6 +3,7 @@ import { whatsappLink } from "../config";
 import Reveal from "./Reveal";
 import HeroVideo from "./HeroVideo";
 import Services from "./Services";
+import DealsSection from "./DealsSection";
 import Installment from "./Installment";
 
 const highlights = [
@@ -65,7 +66,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       {/* Highlights (overlap the bottom of the video) */}
       <div className="relative z-10 mx-auto -mt-12 max-w-6xl px-4 pb-16 md:-mt-14 md:pb-24">
         <div className="grid gap-4 sm:grid-cols-3">
@@ -82,7 +82,7 @@ function Home() {
           ))}
         </div>
       </div>
-      <Services />
+      <DealsSection /> <Services />
       <Installment />
     </section>
   );

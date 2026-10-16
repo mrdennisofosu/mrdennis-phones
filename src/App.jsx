@@ -8,6 +8,9 @@ import NotFound from "./pages/NotFound";
 import DataBundlesPage from "./pages/DataBundlesPage";
 import AccessoriesPage from "./pages/AccessoriesPage";
 import SwapPage from "./pages/SwapPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import TrackPage from "./pages/TrackPage";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/swap" element={<SwapPage />} />
           <Route path="/data-bundles" element={<DataBundlesPage />} />
           <Route path="/accessories" element={<AccessoriesPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/track" element={<TrackPage />} />
           <Route path="/contact" element={<ComingSoon title="Contact" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

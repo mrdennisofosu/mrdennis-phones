@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { whatsappLink } from "../config";
+import CartButton from "./CartButton";
 
 const links = [
   { label: "Home", to: "/" },
@@ -50,7 +51,6 @@ function Navbar() {
             Mr Dennis <span className="text-blue-500">Phones</span>
           </span>
         </Link>
-
         {/* Desktop links */}
         <ul className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
@@ -71,8 +71,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-
-        {/* Desktop button */}
+        <CartButton className="hidden md:flex" /> {/* Desktop button */}
         <a
           href={whatsappLink()}
           target="_blank"
@@ -81,7 +80,7 @@ function Navbar() {
         >
           Chat on WhatsApp
         </a>
-
+        <CartButton className="ml-auto mr-3 flex md:hidden" />{" "}
         {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
